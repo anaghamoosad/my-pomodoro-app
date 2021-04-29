@@ -9,7 +9,9 @@
 
 I am creating my own pomodoro Timer web app following the tutorial  https://freshman.tech/pomodoro-timer/ 
 
-I am taking inspiration from  https://pomofocus.io/ and https://imissmycafe.com/ to integrate new features into the website for my personal use.
+I am taking inspiration from  https://pomofocus.io/ and https://imissmycafe.com/ to integrate new features into the webapp for my personal use.
+
+Learning web developement through this project and is meant for my personal use only 
 
 
 
