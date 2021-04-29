@@ -10,6 +10,7 @@
     <main class="app">
       <progress id="js-progress" value="0"></progress>
       <div class="progress-bar"></div>
+
       <div class="timer">
         <div class="button-group mode-buttons" id="js-mode-buttons">
           <button
@@ -43,8 +44,18 @@
         <button class="main-button" data-action="start" id="js-btn">
           Start
         </button>
+        <div class="cafe-sound">
+        
+          <audio class="audio" controls loop src="./sound/Sunny-Day.mp3">
+            Your user agent does not support the HTML5 Audio element.
+          </audio>
+          <audio class="audio" controls loop src="./sound/Sunny-Day.mp3">
+            Your user agent does not support the HTML5 Audio element.
+          </audio>
      
+        </div>
     </main>
+  
     <div class="hidden">
       <audio src="backtowork.mp3" data-sound="pomodoro"></audio>
       <audio src="break.mp3" data-sound="shortBreak"></audio>
