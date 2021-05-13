@@ -40,17 +40,25 @@
           <span class="separator">:</span>
           <span id="js-seconds">00</span>
         </div>
-        
+      
         <button class="main-button" data-action="start" id="js-btn">
           Start
         </button>
+      </div>
+    
         <div class="cafe-sound">
-        
-          <audio class="audio" controls loop src="./sound/Sunny-Day.mp3">
+          <h3 class="h3">Background Sound Effects</h3>
+         
+           <div class="sunnyday-sound">
+          <h3 class="h2">Sunny Day 
+          <input type="image" src="./img/play.png" class="play" onclick="toggle(this);"/></h2>
+          <audio id=player1 class="audio" controls loop hidden="true" src ="./sound/Sunny-Day.mp3" >                        
             Your user agent does not support the HTML5 Audio element.
           </audio>
-         
-     
+      
+          
+
+        </div> 
         </div>
     </main>
   
@@ -61,4 +69,12 @@
     </div>
     <script src="./js/script.js"></script>
   </body>
+  <script>
+    
+    
+     
+  
+   
+    
+    </script>
 </html>

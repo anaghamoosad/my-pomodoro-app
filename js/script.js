@@ -13,7 +13,7 @@ const timer = {
   const cafeSound = new Audio('./sound/Sunny-Day.mp3');
   const mainButton = document.getElementById('js-btn');
   mainButton.addEventListener('click', () => {
-    buttonSound.play();
+    //buttonSound.play();
     const { action } = mainButton.dataset;
     if (action === 'start') {
       startTimer();
@@ -70,11 +70,11 @@ const timer = {
             switchMode('pomodoro');
         }
   
-        if (Notification.permission === 'granted') {
+       /* if (Notification.permission === 'granted') {
           const text =
             timer.mode === 'pomodoro' ? 'Get back to work!' : 'Take a break!';
           new Notification(text);
-        }
+        } */
   
         document.querySelector(`[data-sound="${timer.mode}"]`).play();
   
@@ -143,7 +143,7 @@ const timer = {
 
 
   document.addEventListener('DOMContentLoaded', () => {
-    if ('Notification' in window) {
+    /*if ('Notification' in window) {
       if (
         Notification.permission !== 'granted' &&
         Notification.permission !== 'denied'
@@ -156,7 +156,26 @@ const timer = {
           }
         });
       }
-    }
+    }*/
   
     switchMode('pomodoro');
-  });
+ 
+  }); 
+
+  function toggle(el){
+    var x = document.getElementById("player1"); 
+    if(el.className!="pause")
+    {
+        el.src="./img/pause.png";
+        el.className="pause";
+        x.play();
+    }
+    else if(el.className=="pause")
+    {
+        el.src="./img/play.png";
+        el.className="play";
+        x.pause();
+    }
+    
+    return false;
+}

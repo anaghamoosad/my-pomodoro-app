@@ -120,37 +120,48 @@
 
 .cafe-sound
 {
+  border-style: ridge;
+  border-color: black;
   position: absolute;
   top: 20%;
-  left: 100%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  
   
 }
-.audio
+
+.sunnyday-sound
 {
-  background-color: transparent;
+  display: inline-block;
+  margin: 10px 10px; 
+ 
 }
-.play{
-  transition: all 0.2s;
-  opacity: 0.75;
-  display:inline-block;
-  width: 4px;
-  height: 1em;
-  border-right: calc(0.5em - 2px) solid white;
-  border-left: calc(0.5em - 2px) solid white;
-  border-top: 0;
-  border-bottom: 0;
-  background-color: transparent;
-  cursor: pointer;
-  
-  &.playing{
-    width: 0;
-    height: 0;  
-    border-right: 0;
-    border-left: 1em solid white;
-    border-top: 0.5em solid transparent;
-    border-bottom: 0.5em solid transparent;
-  }
+.h3 
+{
+  color: black;
+  font-weight: normal;
+ 
 }
+
+.h2
+{
+  color: black;
+  font-weight: normal;
+ 
+}
+
+.play, .pause 
+{width:30px;
+  height:30px;
+  margin: 10px;
+  vertical-align: middle;
+  margin: 10px 10px; 
+}
+
+
+
+
 
 @media screen and (max-width: 550px) {
     .clock {
