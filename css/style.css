@@ -20,9 +20,9 @@
   }
   
   :root {
-    --pomodoro: hsl(355, 100%, 63%);
-    --shortBreak: hsl(107, 44%, 41%);
-    --longBreak: hsl(33, 99%, 55%);
+    --pomodoro: hsl(355, 100%, 72%);
+    --shortBreak: hsl(108, 28%, 50%);
+    --longBreak: hsl(33, 64%, 61%);
   }
   
   body {
@@ -53,8 +53,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 20px;
+    padding: 50px;
     text-align: center;
+    border-style: double;
+    border-color: black;
+    
   }
   
   .clock {
@@ -73,16 +76,18 @@
     cursor: pointer;
     box-shadow: none;
     font-weight: 300;
-    color: #fff;
+    color: black;
     border: 1px solid transparent;
     margin: 0px;
     border-radius: 4px;
     padding: 2px 12px;
     background: none;
+  
   }
   
   .mode-button.active {
-    border-color: #fff;
+    border-color: black;
+    
   }
   
   .main-button {
@@ -120,13 +125,13 @@
 
 .cafe-sound
 {
-  border-style: ridge;
+  border-style: double;
   border-color: black;
   position: absolute;
-  top: 20%;
-  left: 10%;
+  top: 35%;
+  left: 15%;
   transform: translate(-50%, -50%);
-  padding: 20px;
+  padding: 25px;
   
   
 }
@@ -135,28 +140,36 @@
 {
   display: inline-block;
   margin: 10px 10px; 
- 
+  position: relative;
+  left: 5%;
+  padding-top: 10px;
 }
 .h3 
 {
   color: black;
-  font-weight: normal;
- 
+  font-weight: normal; 
+  margin: 5px 5px; 
+
 }
 
 .h2
 {
   color: black;
   font-weight: normal;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  padding: 10px;
  
 }
 
 .play, .pause 
-{width:30px;
-  height:30px;
-  margin: 10px;
+{width:25px;
+  height:25px;
   vertical-align: middle;
-  margin: 10px 10px; 
+  margin-right: 5px;
+  position: relative;
+  right:5%
 }
 
 
@@ -168,3 +181,31 @@
       font-size: 8rem;
     }
   }
+	.fa-volume-up {
+    color: rgb(73, 71, 71);
+	}
+
+  .slider {
+    -webkit-appearance: none;
+    height: 5px;
+    border-radius: 5px;
+    background:rgb(73, 71, 71);
+    outline: none;
+    margin-left: 5px;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+    
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgb(73, 71, 71);
+    cursor: pointer;
+  }
+ 
+
+  
+ 

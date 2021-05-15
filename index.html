@@ -5,33 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pomodoro Timer</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <main class="app">
       <progress id="js-progress" value="0"></progress>
-      <div class="progress-bar"></div>
-
+      <div class="progress-bar">        
+      </div>
       <div class="timer">
         <div class="button-group mode-buttons" id="js-mode-buttons">
           <button
             data-mode="pomodoro"
             class="button active mode-button"
-            id="js-pomodoro"
-          >
+            id="js-pomodoro">
             Pomodoro
           </button>
           <button
             data-mode="shortBreak"
             class="button mode-button"
-            id="js-short-break"
-          >
+            id="js-short-break">
             Short break
           </button>
           <button
             data-mode="longBreak"
             class="button mode-button"
-            id="js-long-break"
-          >
+            id="js-long-break">
             Long break
           </button>
         </div>
@@ -39,27 +37,26 @@
           <span id="js-minutes">25</span>
           <span class="separator">:</span>
           <span id="js-seconds">00</span>
-        </div>
-      
+        </div>      
         <button class="main-button" data-action="start" id="js-btn">
           Start
         </button>
-      </div>
-    
-        <div class="cafe-sound">
-          <h3 class="h3">Background Sound Effects</h3>
-         
-           <div class="sunnyday-sound">
-          <h3 class="h2">Sunny Day 
-          <input type="image" src="./img/play.png" class="play" onclick="toggle(this);"/></h2>
-          <audio id=player1 class="audio" controls loop hidden="true" src ="./sound/Sunny-Day.mp3" >                        
+      </div>    
+      <div class="cafe-sound">
+        <h2 class="h2">Background Sound Effects</h2>         
+        <div class="sunnyday-sound">
+            <h3 class="h3">
+            <input type="image" src="./img/play.png" class="play" onclick="toggle(this);"/>Sunny Day </h3>
+            <div class="volume">
+              <i class="fa fa-volume-up"></i>
+              <input type="range" min="1" max="100" value="50" class="slider" id="volumeslider">
+              
+            </div>
+            <audio id=player1 class="audio"  loop="true" hidden="true" src ="./sound/Sunny-Day.mp3" >                        
             Your user agent does not support the HTML5 Audio element.
-          </audio>
-      
-          
-
+            </audio>  
         </div> 
-        </div>
+      </div>
     </main>
   
     <div class="hidden">
@@ -69,12 +66,6 @@
     </div>
     <script src="./js/script.js"></script>
   </body>
-  <script>
-    
-    
-     
-  
-   
-    
-    </script>
 </html>
+
+

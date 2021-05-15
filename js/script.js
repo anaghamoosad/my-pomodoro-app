@@ -163,19 +163,29 @@ const timer = {
   }); 
 
   function toggle(el){
-    var x = document.getElementById("player1"); 
+    var player = document.getElementById("player1"); 
     if(el.className!="pause")
     {
         el.src="./img/pause.png";
         el.className="pause";
-        x.play();
+        player.volume = 0.5;
+        player.play();
     }
     else if(el.className=="pause")
     {
         el.src="./img/play.png";
         el.className="play";
-        x.pause();
+        player.pause();
     }
     
     return false;
+}
+
+
+var slider = document.getElementById("volumeslider");
+
+slider.oninput = function() {
+  var vol= parseInt(this.value); 
+  var player = document.getElementById("player1");
+  player.volume = vol/100;
 }
