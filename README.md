@@ -5,7 +5,7 @@
  - Following tutorial : https://freshman.tech/pomodoro-timer/ 
  - Inspiration :  https://pomofocus.io/ and https://imissmycafe.com/
 
-Features
+**Features**
 1. Pomodoro timer
 2. Ambience sound
 3. To do list
