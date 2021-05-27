@@ -3,7 +3,7 @@ const timer = {
     shortBreak: 5,
     longBreak: 15,
     longBreakInterval: 4,
-    sessions: 0,
+    sessions: 4,
   };
   
   let interval;
@@ -75,7 +75,7 @@ const timer = {
             timer.mode === 'pomodoro' ? 'Get back to work!' : 'Take a break!';
           new Notification(text);
         } 
-  
+        
         document.querySelector(`[data-sound="${timer.mode}"]`).play();
   
         startTimer();
@@ -128,7 +128,7 @@ const timer = {
     document
       .getElementById('js-progress')
       .setAttribute('max', timer.remainingTime.total);
-  
+      timeSound.pause();
     updateClock();
   }
   
@@ -139,17 +139,18 @@ const timer = {
   
     switchMode(mode);
     stopTimer();
-  }
-
+  };
 
   document.addEventListener('DOMContentLoaded', () => {
+    // Let's check if the browser supports notifications
     if ('Notification' in window) {
-      if (
-        Notification.permission !== 'granted' &&
-        Notification.permission !== 'denied'
-      ) {
+      // If notification permissions have neither been granted or denied
+      if (Notification.permission !== 'granted' && Notification.permission !== 'denied') {
+        // ask the user for permission
         Notification.requestPermission().then(function(permission) {
+          // If permission is granted
           if (permission === 'granted') {
+            // Create a new notification
             new Notification(
               'Awesome! You will be notified at the start of each session'
             );
@@ -157,11 +158,10 @@ const timer = {
         });
       }
     }
-
+  
     switchMode('pomodoro');
- 
-  }); 
-
+  });
+  
   function toggle(el){
     var player = document.getElementById("player1"); 
     if(el.className!="pause")
@@ -179,7 +179,7 @@ const timer = {
     }
     
     return false;
-}
+};
 
 
 var slider = document.getElementById("volumeslider");
@@ -205,14 +205,12 @@ const generateTemplate = (todo) => {
 };
 
 addForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  
+  e.preventDefault();  
   const todo = addForm.add.value.trim();
   if(todo.length) {
     generateTemplate(todo)
     addForm.reset()
-  }
-  
+  }  
 });
 
 // Delete todo
@@ -220,7 +218,7 @@ list.addEventListener('click', e => {
   if(e.target.classList.contains('delete')) {
     e.target.parentElement.remove()
   }
-})
+});
 
 // filter todos
 const filterTodo = term => {
@@ -235,5 +233,5 @@ const filterTodo = term => {
 search.addEventListener('keyup', () => {
   const term = search.value.trim().toLowerCase()
   filterTodo(term)
-})
+});
 

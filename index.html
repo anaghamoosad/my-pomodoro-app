@@ -13,6 +13,7 @@
       <progress id="js-progress" value="0"></progress>
       <div class="progress-bar">        
       </div>
+      <h1 class="h1">Pomodoro Timer</h1>
       <div class="timer">
         <div class="button-group mode-buttons" id="js-mode-buttons">
           <button
@@ -44,10 +45,10 @@
         </button>
       </div>    
       <div class="cafe-sound">
-        <h2 class="h2">Background Sound Effects</h2>         
+        <h2 class="h2">Ambience</h2>         
         <div class="sunnyday-sound">
-            <h3 class="h3">
-            <input type="image" src="./img/play.png" class="play" onclick="toggle(this);"/>Sunny Day </h3>
+            <h4 class="h4">
+            <input type="image" src="./img/play.png" class="play" onclick="toggle(this);"/>Sunny Day</h4>
             <div class="volume">
               <i class="fa fa-volume-up"></i>
               <input type="range" min="1" max="100" value="50" class="slider" id="volumeslider">
@@ -61,7 +62,7 @@
   <!--https://codepen.io/mkrishna/pen/NWRQjzM-->
       <div class ="todolist">
         <form class="add text-center my-4">
-         <h3>My ToDo List </h3>
+         <h3>My ToDo List</h3>
           <input class="form-control m-auto" type="text" name="add" placeholder="Enter your task.."/>
         </form>  
         <ul class="list-group todos mx-auto text-light">
@@ -77,9 +78,9 @@
     </main>
   
     <div class="hidden">
-      <audio src="backtowork.mp3" data-sound="pomodoro"></audio>
-      <audio src="break.mp3" data-sound="shortBreak"></audio>
-      <audio src="break.mp3" data-sound="longBreak"></audio>
+      <audio src="./sound/backtowork.mp3" data-sound="pomodoro"></audio>
+      <audio src="./sound/break.mp3" data-sound="shortBreak"></audio>
+      <audio src="./sound/break.mp3" data-sound="longBreak"></audio>
     </div>
     <script src="./js/script.js"></script>
   </body>
